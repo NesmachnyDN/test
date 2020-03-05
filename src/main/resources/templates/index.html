@@ -14,10 +14,12 @@
                 <th>Имя</th>
             </thead>
             <tbody>
-                <tr th:each="man : ${lastNameList}">
-                    <td th:text="${man.id}">Id</td>
-                    <td th:text="${man.lastName}">LastName</td>
-                    <td th:text="${man.man_id}">Name</td>
+                <tr th:if="${men.empty}">
+                    <td colspan="2"> No Men Available </td>
+                </tr>
+                <tr th:each="man : ${man}">
+                    <td><span th:text="${man.title}"> Title </span></td>
+                    <td><span th:text="${man.author}"> Author </span></td>
                 </tr>
             </tbody>
         </table>
