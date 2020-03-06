@@ -10,16 +10,12 @@
         <table border="1">
             <thead>
                 <th>Id</th>
-                <th>Фамилия</th>
                 <th>Имя</th>
             </thead>
             <tbody>
-                <tr th:if="${men.empty}">
-                    <td colspan="2"> No Men Available </td>
-                </tr>
-                <tr th:each="man : ${man}">
-                    <td><span th:text="${man.title}"> Title </span></td>
-                    <td><span th:text="${man.author}"> Author </span></td>
+                <tr th:each="man : ${manList}">
+                    <td><span th:text="${man.id}"> Title </span></td>
+                    <td><span th:text="${man.firstName}"> Author </span></td>
                 </tr>
             </tbody>
         </table>
